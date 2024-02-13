@@ -9,6 +9,7 @@ interface Props {
   backButtonLabel: string
   backButtonHref: string
   showSocial: boolean
+  disableSocial:boolean
   children: React.ReactNode
 }
 
@@ -17,6 +18,7 @@ export default function AuthCard({
   headerLabel,
   children,
   showSocial,
+  disableSocial,
   backButtonHref,
   backButtonLabel,
 }: Props) {
@@ -31,7 +33,7 @@ export default function AuthCard({
       <CardContent>{children}</CardContent>
       {showSocial && (
         <CardFooter>
-          <Social />
+          <Social isDisable={disableSocial} />
         </CardFooter>
       )}
       <CardFooter>
