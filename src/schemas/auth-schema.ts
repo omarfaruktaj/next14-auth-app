@@ -10,3 +10,4 @@ export const registerSchema = z.object({
         'Please ensure your password is at least 8 characters long and includes uppercase and lowercase letters, a digit, and a special character (@, $, !, %, *, ?, &)',
     }),
 })
+export type RegisterSchema = z.infer<typeof registerSchema>
